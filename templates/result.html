@@ -42,11 +42,17 @@
         a:hover {
             color: #45a049;
         }
+        img { max-width: 100%; border-radius: 6px; }
+        .notice { color: #666; font-size: 14px; }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>{{ result }}</h1>
+        <h1>{{ label }}</h1>
+        <p>Model confidence: <strong>{{ confidence }}</strong></p>
+        <p>Visualized contour regions: <strong>{{ contour_count }}</strong></p>
+        <img src="data:image/jpeg;base64,{{ result_image }}" alt="Annotated analysis result">
+        <p class="notice">Academic prototype only. This output is not a medical diagnosis.</p>
         <a href="{% url 'upload' %}">Upload another image</a>
     </div>
 </body>
