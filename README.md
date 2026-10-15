@@ -11,6 +11,8 @@ for experimentation and education, not clinical diagnosis.
 - Confidence reporting and contour-area filtering
 - Reproducible evaluation script for precision, recall, F1, confusion matrix and ROC-AUC
 - Unit tests that do not require loading the full model
+- Calibration error, threshold analysis and patient-level split utilities
+- Machine-readable evaluation output and a formal experiment protocol
 
 ## Evaluation
 
@@ -23,6 +25,9 @@ python evaluate_model.py --data /path/to/test-data
 The repository intentionally does not publish accuracy without a documented,
 held-out dataset. Future work should add training code, dataset provenance,
 patient-independent splitting where applicable, model comparisons and Grad-CAM.
+
+Read `EXPERIMENTS.md` and `MODEL_CARD.md` before reporting any result. The
+application is a research prototype and not a diagnostic system.
 
 ## Run locally
 
